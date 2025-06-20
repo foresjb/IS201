@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Joke Generator</title>
+  <style>
+    body {
+      background-color: #fff8dc;
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+    h1 {
+      color: #4a2f27;
+    }
+    #joke-box {
+      background-color: #ffe4b5;
+      border-radius: 10px;
+      padding: 30px;
+      margin: 20px auto;
+      max-width: 600px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      font-size: 1.2rem;
+      color: #333;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      border: none;
+      background-color: #ff7f50;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #ff6347;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 0;
+      margin-bottom: 40px;
+    }
+    nav li a {
+      text-decoration: none;
+      color: #4a2f27;
+      font-weight: bold;
+    }
+    nav a {
+      text-decoration: none;
+      color: #4a2f27;
+      font-weight: bold;
+      padding: 10px 15px;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+    nav a:hover {
+      background-color: #ffd8a8;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="scratch.html">← Back to Politics Dashboard</a></li>
+    </ul>
+  </nav>
+
+  <h1>Need a Laugh?</h1>
+  <div id="joke-box">Click the button to get a joke!</div>
+  <button onclick="getJoke()">Tell Me a Joke</button>
+
+  <script>
+    const jokes = [
+      "Why don't scientists trust atoms? Because they make up everything!",
+      "Why did the finance student break up with the calculator? He felt like he was being used!",
+      "Why did the developer go broke? Because he used up all his cache!",
+      "Why was the JavaScript file so good at school? Because it knew how to handle events!",
+      "Why do SQL databases hate relationships? Too many JOINs!"
+    ];
+
+    function getJoke() {
+      const joke = jokes[Math.floor(Math.random() * jokes.length)];
+      document.getElementById('joke-box').innerText = joke;
+    }
+  </script>
+</body>
+</html>
